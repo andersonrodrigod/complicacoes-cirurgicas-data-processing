@@ -8,7 +8,6 @@ COLUNAS_PRINCIPAIS = [
     "COMPLICACAO",
     "OBITO",
     "COD USUARIO",
-    "CD_PESSOA",
     "USUARIO",
     "TELEFONE",
     "IDADE",
@@ -59,6 +58,7 @@ COLUNAS_PRINCIPAIS = [
     "TELEFONE 3",
     "TELEFONE 4",
     "TELEFONE 5",
+    "CD_PESSOA"
 ]
 
 COLUNAS_PESQUISA = [

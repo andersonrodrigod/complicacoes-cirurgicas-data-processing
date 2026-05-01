@@ -5,6 +5,7 @@ from decimal import Decimal, InvalidOperation
 import pandas as pd
 
 from configuracoes import ABAS_AJUSTADAS, COLUNAS_PRINCIPAIS, PALAVRAS_PRIORITARIAS
+from formulas_excel import aplicar_formulas
 
 
 arquivo = Path("data/complicacao.xlsx")
@@ -431,6 +432,8 @@ with pd.ExcelWriter(arquivo_saida, engine="openpyxl") as writer:
     for nome_aba, colunas in ABAS_AJUSTADAS.items():
         df_aba = pd.DataFrame(columns=colunas)
         df_aba.to_excel(writer, sheet_name=nome_aba, index=False)
+
+aplicar_formulas(arquivo_saida)
 
 arquivo_excluidos = pasta_relatorios / "linhas_excluidas.xlsx"
 df_excluidos.to_excel(arquivo_excluidos, index=False)
