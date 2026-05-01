@@ -1,6 +1,8 @@
 import pandas as pd
 import re
 
+from configuracoes import PALAVRAS_PRIORITARIAS
+
 
 # =====================================================
 # Funcoes auxiliares
@@ -10,52 +12,6 @@ def primeira_palavra(valor):
     if not texto:
         return ""
     return texto.split()[0]
-
-
-PALAVRAS_PRIORITARIAS = [
-    # Prioridades originais
-    "CESARIANA",
-    "PARTO",
-    # Primeiras palavras da coluna PROC_1 (fixas no codigo)
-    "ABLACAO",
-    "AMIGDALECTOMIA",
-    "AMPUTACAO",
-    "ANEURISMA",
-    "ANGIOPLASTIA",
-    "ANOMALIA",
-    "APENDICECTOMIA",
-    "ARTRITE",
-    "ARTRODESE",
-    "ARTROPLASTIA",
-    "ARTROTOMIA",
-    "BRONCOSCOPIA",
-    "COLECISTECTOMIA",
-    "COLECTOMIA",
-    "COLPOPLASTIA",
-    "DILATACAO",
-    "ENXERTO",
-    "EPISTAXE",
-    "FACECTOMIA",
-    "FISTULECTOMIA",
-    "GASTROPLASTIA",
-    "HERNIA",
-    "HERNIORRAFIA",
-    "HISTERECTOMIA",
-    "HISTEROSCOPIA",
-    "LAPAROTOMIA",
-    "LIPOASPIRACAO",
-    "MAMOPLASTIA",
-    "ORQUIDOPEXIA",
-    "OSTEOPLASTIAS",
-    "PTERIGIO",
-    "QUADRANTECTOMIA",
-    "QUIMIOEMBOLIZACAO",
-    "RECONSTRUCAO",
-    "RUPTURA",
-    "SEPTOPLASTIA",
-    "TROCA",
-    "URETERORRENOLITOTRIPSIA",
-]
 
 
 # =====================================================
